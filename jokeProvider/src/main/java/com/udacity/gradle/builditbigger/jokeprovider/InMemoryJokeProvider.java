@@ -1,4 +1,4 @@
-package com.lania.android.products.joker;
+package com.udacity.gradle.builditbigger.jokeprovider;
 
 import java.util.Random;
 

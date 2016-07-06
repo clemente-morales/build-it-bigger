@@ -7,8 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.lania.android.products.joker.InMemoryJokeProvider;
-import com.lania.android.products.joker.JokeProvider;
+import com.udacity.gradle.builditbigger.jokeprovider.InMemoryJokeProvider;
+import com.udacity.gradle.builditbigger.jokeprovider.JokeProvider;
 import com.udacity.gradle.builditbigger.jokedisplayer.views.JokeDisplayerActivity;
 
 
