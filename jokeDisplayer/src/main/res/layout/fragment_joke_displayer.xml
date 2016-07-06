@@ -6,10 +6,8 @@
 
     <TextView
         android:id="@+id/jokeTextView"
-        android:layout_width="wrap_content"
+        style="@style/joke"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/dummy_joke"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:text="@string/dummy_joke" />
 </RelativeLayout>

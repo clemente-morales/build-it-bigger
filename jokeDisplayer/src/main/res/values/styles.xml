@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="joke">
+        <item name="android:layout_marginLeft">@dimen/joke_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/joke_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/joke_margin_top</item>
+        <item name="android:paddingLeft">@dimen/joke_padding_left</item>
+        <item name="android:paddingRight">@dimen/joke_padding_right</item>
+        <item name="android:paddingTop">@dimen/joke_padding_top</item>
+        <item name="android:paddingBottom">@dimen/joke_padding_bottom</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+</resources>

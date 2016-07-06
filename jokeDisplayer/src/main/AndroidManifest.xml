@@ -5,10 +5,6 @@
         android:supportsRtl="true">
 
         <activity android:name=".views.JokeDisplayerActivity">
-            <intent-filter>
-                <action android:name="com.udacity.gradle.builditbigger.display_joke" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
     </application>
 
