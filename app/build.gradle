@@ -29,7 +29,6 @@ dependencies {
 
     compile 'com.android.support:multidex:1.0.0'
 
-    compile project(':jokeProvider')
     compile project(':jokeDisplayer')
 
     compile project(path: ':jokeservice', configuration:'android-endpoints')

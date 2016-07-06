@@ -9,6 +9,8 @@ package com.udacity.gradle.builditbigger.jokeservice;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
+import com.udacity.gradle.builditbigger.jokeprovider.InMemoryJokeProvider;
+import com.udacity.gradle.builditbigger.jokeprovider.JokeProvider;
 
 import javax.inject.Named;
 
@@ -24,17 +26,19 @@ import javax.inject.Named;
                 packagePath = ""
         )
 )
-public class MyEndpoint {
+public class JokesEndpoint {
 
     /**
      * A simple endpoint method that takes a name and says Hi back
      */
     @ApiMethod(name = "getJoke", httpMethod = ApiMethod.HttpMethod.GET)
-    public MyBean getJoke(@Named("category") String category) {
-        MyBean response = new MyBean();
-        response.setData("Hi, " + category);
-
-        return response;
+    public Joke getJoke(@Named("category") String category) {
+        JokeProvider jokeProvider = new InMemoryJokeProvider();
+        String randomJoke = jokeProvider.getRandomJoke();
+        Joke joke = new Joke();
+        joke.setCategory(category);
+        joke.setDescription(randomJoke);
+        return joke;
     }
 
 }

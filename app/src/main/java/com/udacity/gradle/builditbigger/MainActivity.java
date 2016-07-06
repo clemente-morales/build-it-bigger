@@ -7,13 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.udacity.gradle.builditbigger.jokeprovider.InMemoryJokeProvider;
-import com.udacity.gradle.builditbigger.jokeprovider.JokeProvider;
 import com.udacity.gradle.builditbigger.jokedisplayer.views.JokeDisplayerActivity;
 
 
 public class MainActivity extends ActionBarActivity {
-    private JokeProvider jokeProvider = new InMemoryJokeProvider();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +37,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view){
-        String joke = jokeProvider.getRandomJoke();
+        // String joke = jokeProvider.getRandomJoke();
+        String joke = "Jajaja";
         // Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, JokeDisplayerActivity.class);
         intent.putExtra(JokeDisplayerActivity.JOKE_EXTRA_KEY, joke);
