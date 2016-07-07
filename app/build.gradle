@@ -5,7 +5,6 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
@@ -18,13 +17,30 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    productFlavors {
+        free {
+            applicationId "com.udacity.gradle.builditbigger.free"
+            versionName "1.0-free"
+        }
+        paid {
+            applicationId "com.udacity.gradle.builditbigger.paid"
+            versionName "1.0-paid"
+        }
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
     // Added for AdMob
-    compile 'com.google.android.gms:play-services:9.2.0'
+    freeCompile 'com.google.android.gms:play-services:9.2.0'
+
     compile 'com.android.support:appcompat-v7:23.4.0'
 
     compile 'com.android.support:multidex:1.0.0'
