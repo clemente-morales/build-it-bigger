@@ -1,5 +1,7 @@
 package com.udacity.gradle.builditbigger.jokeprovider;
 
 public interface JokeProvider {
-	String getRandomJoke();
+	Joke getRandomJoke();
+
+	Joke getJoke(String category);
 }

@@ -34,11 +34,7 @@ public class JokesEndpoint {
     @ApiMethod(name = "getJoke", httpMethod = ApiMethod.HttpMethod.GET)
     public Joke getJoke(@Named("category") String category) {
         JokeProvider jokeProvider = new InMemoryJokeProvider();
-        String randomJoke = jokeProvider.getRandomJoke();
-        Joke joke = new Joke();
-        joke.setCategory(category);
-        joke.setDescription(randomJoke);
-        return joke;
+        return JokeConverter.toTransferObject(jokeProvider.getJoke(category));
     }
 
 }

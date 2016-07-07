@@ -38,6 +38,6 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view){
-        new JokeRequestorAsyncTask().execute(new Pair<Context, String>(this, "Lawyers"));
+        new JokeRequestorAsyncTask().execute(new Pair<Context, String>(this, "general"));
     }
 }
