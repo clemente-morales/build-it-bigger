@@ -55,6 +55,9 @@ dependencies {
 
 
     androidTestCompile "org.hamcrest:hamcrest-library:$rootProject.ext.hamcrestVersion"
+    androidTestCompile "org.mockito:mockito-core:1.+"
+    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
 
     // Android Testing Support Library's runner and rules
     androidTestCompile "com.android.support.test:runner:$rootProject.ext.runnerVersion"
