@@ -19,6 +19,11 @@ public class JokeRequestorAsyncTask extends AsyncTask<String, Void, Joke> {
     }
 
     @Override
+    protected void onPreExecute() {
+        jokeFetchListener.onPreExecute();
+    }
+
+    @Override
     protected Joke doInBackground(String... params) {
         String category = params[0];
         return jokeProvider.getJokeByCategory(category);
@@ -30,6 +35,8 @@ public class JokeRequestorAsyncTask extends AsyncTask<String, Void, Joke> {
     }
 
     public interface OnJokeFetchListener {
+
+        void onPreExecute();
         void onComplete(Joke joke);
     }
 
