@@ -2,12 +2,12 @@
  Application with multiple flavors that uses multiple libraries and Google Cloud Endpoints.
 
 ##Include the following features
-* **Banner**
-* **Java library to provide jokes**
-* **Android library to display the jokes**
-* **Google Cloud Endpoint backend module to expose the jokes remotely**
-* **Functional tests and local unit tests**
-* **2 Flavors, paid and free**. Paid flavor allows the user to select the category to retrieve a random joke.
+* Banner
+* Java library to provide jokes
+* Android library to display the jokes
+* Google Cloud Endpoint backend module to expose the jokes remotely
+* Functional tests and local unit tests
+* 2 Flavors, paid and free. Paid flavor allows the user to select the category to retrieve a random joke.
 
 
 ## Deploy the joke service module to App engine
