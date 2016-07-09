@@ -24,6 +24,6 @@ public class ExampleInstrumentationTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("builditbigger.gradle.udacity.com.androidlibrary.test", appContext.getPackageName());
+        assertEquals("com.udacity.gradle.builditbigger.jokedisplayer.test", appContext.getPackageName());
     }
 }

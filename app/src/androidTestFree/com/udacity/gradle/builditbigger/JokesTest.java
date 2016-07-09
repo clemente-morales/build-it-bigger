@@ -26,10 +26,7 @@ public class JokesTest {
 
     @Test
     public void clickAddJokeButton_opensJokeUi() throws Exception {
-        // Click on the get joke button
-        onView(withId(R.id.jokeButton)).perform(click());
-
-        // Check if the joke is displayed
+        onView(withId(R.id.getJokeButton)).perform(click());
         onView(withId(R.id.jokeTextView)).check(matches(isDisplayed()));
     }
 }
